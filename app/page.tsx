@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone, ExternalLink, MapPin, GraduationCap, Briefcase, Award, BookOpen, Code } from "lucide-react"
+import { Github, Linkedin, Mail, Phone, ExternalLink, MapPin, GraduationCap, Briefcase, Award, BookOpen, Code, ChevronRight } from "lucide-react"
 
 const education = [
   {
@@ -31,17 +31,17 @@ const certifications = [
   {
     title: "AWS Cloud Practitioner",
     issuer: "Amazon Web Services",
-    icon: "☁️",
+    color: "from-orange-500 to-yellow-500",
   },
   {
     title: "Cyber Job Simulation",
     issuer: "Deloitte",
-    icon: "🔐",
+    color: "from-green-500 to-emerald-500",
   },
   {
-    title: "Mastering Generative AI and ChatGPT",
+    title: "Mastering Generative AI",
     issuer: "GeeksforGeeks",
-    icon: "🤖",
+    color: "from-purple-500 to-pink-500",
   },
 ]
 
@@ -57,7 +57,7 @@ const experience = [
 const projects = [
   {
     title: "College Resource Management System",
-    type: "Full Stack",
+    type: "Full Stack Application",
     description: "MERN-based college management system enabling students to access notes, track announcements, and upload resources.",
     tech: ["MongoDB", "Express", "React", "Node.js"],
   },
@@ -71,97 +71,128 @@ const achievements = [
 
 export default function Portfolio() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-[#0a0a0f] text-[#f0f0f5]">
+      {/* Gradient Background Effects */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[128px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[128px]" />
+      </div>
+
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="mx-auto max-w-5xl px-6 py-4">
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[#2a2a3a] bg-[#0a0a0f]/80 backdrop-blur-xl">
+        <div className="mx-auto max-w-6xl px-6 py-4">
           <div className="flex items-center justify-between">
-            <span className="text-base font-semibold tracking-tight">SKG</span>
+            <span className="text-lg font-bold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              SKG
+            </span>
             <div className="hidden md:flex items-center gap-8">
-              <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</a>
-              <a href="#experience" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Experience</a>
-              <a href="#projects" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Projects</a>
-              <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+              {["About", "Education", "Experience", "Projects", "Contact"].map((item) => (
+                <a 
+                  key={item}
+                  href={`#${item.toLowerCase()}`} 
+                  className="text-sm text-[#8a8a9a] hover:text-cyan-400 transition-colors duration-300"
+                >
+                  {item}
+                </a>
+              ))}
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-40 pb-32 px-6">
-        <div className="mx-auto max-w-5xl">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+      <section className="relative pt-32 pb-24 px-6">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
             <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm mb-6">
-                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm mb-8">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                </span>
                 Available for opportunities
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">
-                Shivam Kumar<br />
-                <span className="text-muted-foreground">Gupta</span>
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+                <span className="bg-gradient-to-r from-white via-white to-[#8a8a9a] bg-clip-text text-transparent">
+                  Shivam Kumar
+                </span>
+                <br />
+                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Gupta
+                </span>
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-4">
+              <p className="text-xl md:text-2xl text-[#8a8a9a] mb-4">
                 Software Engineer
               </p>
-              <p className="text-base text-muted-foreground/80 leading-relaxed max-w-lg">
+              <p className="text-base text-[#6a6a7a] leading-relaxed max-w-lg mb-8">
                 Building robust, scalable applications with modern web technologies. 
                 Currently pursuing B.Tech at MMMUT, Gorakhpur.
               </p>
-              <div className="flex items-center gap-2 mt-6 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4" />
+              <div className="flex items-center gap-2 text-sm text-[#8a8a9a]">
+                <MapPin className="h-4 w-4 text-cyan-400" />
                 Gorakhpur, India
               </div>
             </div>
-            <div className="flex md:flex-col items-center gap-4">
-              <a 
-                href="https://github.com/shivamgupta911" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 rounded-lg bg-card border border-border hover:border-accent/50 hover:bg-card/80 transition-all"
-                aria-label="GitHub Profile"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-              <a 
-                href="https://linkedin.com/in/shivam-gupta573b18324" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 rounded-lg bg-card border border-border hover:border-accent/50 hover:bg-card/80 transition-all"
-                aria-label="LinkedIn Profile"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a 
-                href="mailto:shivamkgupta911@gmail.com"
-                className="p-3 rounded-lg bg-card border border-border hover:border-accent/50 hover:bg-card/80 transition-all"
-                aria-label="Email"
-              >
-                <Mail className="h-5 w-5" />
-              </a>
+            
+            {/* Social Links Card */}
+            <div className="lg:self-center">
+              <div className="p-6 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300">
+                <p className="text-sm text-[#8a8a9a] mb-4">Connect with me</p>
+                <div className="flex flex-col gap-3">
+                  <a 
+                    href="https://github.com/shivamgupta911" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-3 rounded-xl bg-[#1a1a24] hover:bg-[#2a2a3a] border border-transparent hover:border-cyan-500/30 transition-all duration-300 group"
+                  >
+                    <Github className="h-5 w-5 text-[#8a8a9a] group-hover:text-cyan-400 transition-colors" />
+                    <span className="text-sm text-[#8a8a9a] group-hover:text-white transition-colors">GitHub</span>
+                    <ChevronRight className="h-4 w-4 text-[#4a4a5a] group-hover:text-cyan-400 ml-auto transition-colors" />
+                  </a>
+                  <a 
+                    href="https://linkedin.com/in/shivam-gupta573b18324" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-3 rounded-xl bg-[#1a1a24] hover:bg-[#2a2a3a] border border-transparent hover:border-cyan-500/30 transition-all duration-300 group"
+                  >
+                    <Linkedin className="h-5 w-5 text-[#8a8a9a] group-hover:text-cyan-400 transition-colors" />
+                    <span className="text-sm text-[#8a8a9a] group-hover:text-white transition-colors">LinkedIn</span>
+                    <ChevronRight className="h-4 w-4 text-[#4a4a5a] group-hover:text-cyan-400 ml-auto transition-colors" />
+                  </a>
+                  <a 
+                    href="mailto:shivamkgupta911@gmail.com"
+                    className="flex items-center gap-3 p-3 rounded-xl bg-[#1a1a24] hover:bg-[#2a2a3a] border border-transparent hover:border-cyan-500/30 transition-all duration-300 group"
+                  >
+                    <Mail className="h-5 w-5 text-[#8a8a9a] group-hover:text-cyan-400 transition-colors" />
+                    <span className="text-sm text-[#8a8a9a] group-hover:text-white transition-colors">Email</span>
+                    <ChevronRight className="h-4 w-4 text-[#4a4a5a] group-hover:text-cyan-400 ml-auto transition-colors" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-6">
-        <div className="mx-auto max-w-5xl">
+      <section id="about" className="relative py-24 px-6">
+        <div className="mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-12">
-            <div className="p-2 rounded-lg bg-accent/10 border border-accent/20">
-              <Code className="h-5 w-5 text-accent" />
+            <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
+              <Code className="h-5 w-5 text-cyan-400" />
             </div>
-            <h2 className="text-2xl font-semibold">About</h2>
+            <h2 className="text-2xl font-semibold">About Me</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <p className="text-muted-foreground leading-relaxed">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300">
+              <p className="text-[#a0a0b0] leading-relaxed text-lg">
                 I&apos;m a software engineer passionate about creating elegant solutions to complex problems. 
                 My work spans across full-stack development, with expertise in modern JavaScript frameworks 
                 and a strong foundation in computer science fundamentals.
               </p>
             </div>
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <p className="text-muted-foreground leading-relaxed">
+            <div className="p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300">
+              <p className="text-[#a0a0b0] leading-relaxed text-lg">
                 When I&apos;m not coding, I contribute to The Editorial Board at my university and continuously 
                 explore emerging technologies in cloud computing and AI.
               </p>
@@ -171,27 +202,30 @@ export default function Portfolio() {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-24 px-6">
-        <div className="mx-auto max-w-5xl">
+      <section id="education" className="relative py-24 px-6">
+        <div className="mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-12">
-            <div className="p-2 rounded-lg bg-accent/10 border border-accent/20">
-              <GraduationCap className="h-5 w-5 text-accent" />
+            <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
+              <GraduationCap className="h-5 w-5 text-cyan-400" />
             </div>
             <h2 className="text-2xl font-semibold">Education</h2>
           </div>
           <div className="space-y-4">
             {education.map((edu, index) => (
-              <div key={index} className="p-6 rounded-xl bg-card border border-border hover:border-border/80 transition-colors">
+              <div 
+                key={index} 
+                className="p-6 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300 group"
+              >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
-                    <h3 className="font-semibold text-lg mb-1">{edu.degree}</h3>
-                    <p className="text-muted-foreground">{edu.institution}</p>
+                    <h3 className="font-semibold text-lg mb-1 group-hover:text-cyan-400 transition-colors">{edu.degree}</h3>
+                    <p className="text-[#8a8a9a]">{edu.institution}</p>
                   </div>
-                  <div className="flex items-center gap-4 md:text-right">
-                    <span className="px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium">
+                  <div className="flex items-center gap-4">
+                    <span className="px-4 py-1.5 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-medium">
                       {edu.grade}
                     </span>
-                    <span className="text-sm text-muted-foreground whitespace-nowrap">{edu.period}</span>
+                    <span className="text-sm text-[#6a6a7a] whitespace-nowrap">{edu.period}</span>
                   </div>
                 </div>
               </div>
@@ -201,25 +235,30 @@ export default function Portfolio() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-24 px-6">
-        <div className="mx-auto max-w-5xl">
+      <section id="experience" className="relative py-24 px-6">
+        <div className="mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-12">
-            <div className="p-2 rounded-lg bg-accent/10 border border-accent/20">
-              <Briefcase className="h-5 w-5 text-accent" />
+            <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
+              <Briefcase className="h-5 w-5 text-cyan-400" />
             </div>
             <h2 className="text-2xl font-semibold">Experience</h2>
           </div>
           <div className="space-y-4">
             {experience.map((exp, index) => (
-              <div key={index} className="p-6 rounded-xl bg-card border border-border">
+              <div 
+                key={index} 
+                className="p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300"
+              >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                   <div>
-                    <h3 className="font-semibold text-lg mb-1">{exp.role}</h3>
-                    <p className="text-accent">{exp.organization}</p>
+                    <h3 className="font-semibold text-xl mb-2">{exp.role}</h3>
+                    <p className="text-cyan-400 font-medium">{exp.organization}</p>
                   </div>
-                  <span className="text-sm text-muted-foreground whitespace-nowrap">{exp.period}</span>
+                  <span className="px-4 py-1.5 rounded-full bg-[#1a1a24] border border-[#2a2a3a] text-sm text-[#8a8a9a] whitespace-nowrap">
+                    {exp.period}
+                  </span>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
+                <p className="text-[#a0a0b0] leading-relaxed">{exp.description}</p>
               </div>
             ))}
           </div>
@@ -227,30 +266,38 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-24 px-6">
-        <div className="mx-auto max-w-5xl">
+      <section id="projects" className="relative py-24 px-6">
+        <div className="mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-12">
-            <div className="p-2 rounded-lg bg-accent/10 border border-accent/20">
-              <ExternalLink className="h-5 w-5 text-accent" />
+            <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
+              <ExternalLink className="h-5 w-5 text-cyan-400" />
             </div>
             <h2 className="text-2xl font-semibold">Projects</h2>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-6">
             {projects.map((project, index) => (
-              <div key={index} className="group p-6 rounded-xl bg-card border border-border hover:border-accent/30 transition-all">
+              <div 
+                key={index} 
+                className="group p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,212,255,0.1)]"
+              >
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="font-semibold text-lg mb-1 group-hover:text-accent transition-colors">
+                    <h3 className="font-semibold text-xl mb-2 group-hover:text-cyan-400 transition-colors">
                       {project.title}
                     </h3>
-                    <span className="text-sm text-muted-foreground">{project.type}</span>
+                    <span className="text-sm text-cyan-400/80 font-medium">{project.type}</span>
                   </div>
-                  <ExternalLink className="h-5 w-5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="p-2 rounded-lg bg-[#1a1a24] group-hover:bg-cyan-500/10 transition-colors">
+                    <ExternalLink className="h-5 w-5 text-[#6a6a7a] group-hover:text-cyan-400 transition-colors" />
+                  </div>
                 </div>
-                <p className="text-muted-foreground leading-relaxed mb-6">{project.description}</p>
+                <p className="text-[#a0a0b0] leading-relaxed mb-6">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
-                    <span key={tech} className="px-3 py-1 text-sm bg-secondary rounded-lg text-muted-foreground">
+                    <span 
+                      key={tech} 
+                      className="px-3 py-1.5 text-sm bg-[#1a1a24] border border-[#2a2a3a] rounded-lg text-[#a0a0b0] hover:border-cyan-500/30 hover:text-cyan-400 transition-all"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -262,40 +309,49 @@ export default function Portfolio() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-24 px-6">
-        <div className="mx-auto max-w-5xl">
+      <section id="skills" className="relative py-24 px-6">
+        <div className="mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-12">
-            <div className="p-2 rounded-lg bg-accent/10 border border-accent/20">
-              <Code className="h-5 w-5 text-accent" />
+            <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
+              <Code className="h-5 w-5 text-cyan-400" />
             </div>
             <h2 className="text-2xl font-semibold">Technical Skills</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <h3 className="font-semibold mb-4">Languages</h3>
+            <div className="p-6 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300">
+              <h3 className="font-semibold text-lg mb-4 text-cyan-400">Languages</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.languages.map((skill) => (
-                  <span key={skill} className="px-3 py-1 text-sm bg-secondary rounded-lg text-foreground">
+                  <span 
+                    key={skill} 
+                    className="px-3 py-1.5 text-sm bg-[#1a1a24] border border-[#2a2a3a] rounded-lg text-[#d0d0e0] hover:border-cyan-500/30 hover:bg-cyan-500/10 transition-all cursor-default"
+                  >
                     {skill}
                   </span>
                 ))}
               </div>
             </div>
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <h3 className="font-semibold mb-4">Frameworks</h3>
+            <div className="p-6 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300">
+              <h3 className="font-semibold text-lg mb-4 text-cyan-400">Frameworks</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.frameworks.map((skill) => (
-                  <span key={skill} className="px-3 py-1 text-sm bg-secondary rounded-lg text-foreground">
+                  <span 
+                    key={skill} 
+                    className="px-3 py-1.5 text-sm bg-[#1a1a24] border border-[#2a2a3a] rounded-lg text-[#d0d0e0] hover:border-cyan-500/30 hover:bg-cyan-500/10 transition-all cursor-default"
+                  >
                     {skill}
                   </span>
                 ))}
               </div>
             </div>
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <h3 className="font-semibold mb-4">Tools & Platforms</h3>
+            <div className="p-6 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300">
+              <h3 className="font-semibold text-lg mb-4 text-cyan-400">Tools & Platforms</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.tools.map((skill) => (
-                  <span key={skill} className="px-3 py-1 text-sm bg-secondary rounded-lg text-foreground">
+                  <span 
+                    key={skill} 
+                    className="px-3 py-1.5 text-sm bg-[#1a1a24] border border-[#2a2a3a] rounded-lg text-[#d0d0e0] hover:border-cyan-500/30 hover:bg-cyan-500/10 transition-all cursor-default"
+                  >
                     {skill}
                   </span>
                 ))}
@@ -306,20 +362,20 @@ export default function Portfolio() {
       </section>
 
       {/* Achievements Section */}
-      <section id="achievements" className="py-24 px-6">
-        <div className="mx-auto max-w-5xl">
+      <section id="achievements" className="relative py-24 px-6">
+        <div className="mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-12">
-            <div className="p-2 rounded-lg bg-accent/10 border border-accent/20">
-              <Award className="h-5 w-5 text-accent" />
+            <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
+              <Award className="h-5 w-5 text-cyan-400" />
             </div>
             <h2 className="text-2xl font-semibold">Achievements</h2>
           </div>
-          <div className="p-6 rounded-xl bg-card border border-border">
+          <div className="p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a]">
             <ul className="space-y-4">
               {achievements.map((achievement, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                  <span className="text-muted-foreground">{achievement}</span>
+                <li key={index} className="flex items-start gap-4">
+                  <span className="mt-2 w-2 h-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 shrink-0" />
+                  <span className="text-[#a0a0b0] text-lg">{achievement}</span>
                 </li>
               ))}
             </ul>
@@ -328,20 +384,25 @@ export default function Portfolio() {
       </section>
 
       {/* Certifications Section */}
-      <section id="certifications" className="py-24 px-6">
-        <div className="mx-auto max-w-5xl">
+      <section id="certifications" className="relative py-24 px-6">
+        <div className="mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-12">
-            <div className="p-2 rounded-lg bg-accent/10 border border-accent/20">
-              <Award className="h-5 w-5 text-accent" />
+            <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
+              <Award className="h-5 w-5 text-cyan-400" />
             </div>
             <h2 className="text-2xl font-semibold">Certifications</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
-              <div key={index} className="p-6 rounded-xl bg-card border border-border hover:border-accent/30 transition-colors">
-                <div className="text-3xl mb-4">{cert.icon}</div>
-                <h3 className="font-semibold mb-1">{cert.title}</h3>
-                <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+              <div 
+                key={index} 
+                className="group p-6 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300"
+              >
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${cert.color} flex items-center justify-center mb-4`}>
+                  <Award className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-lg mb-1 group-hover:text-cyan-400 transition-colors">{cert.title}</h3>
+                <p className="text-sm text-[#8a8a9a]">{cert.issuer}</p>
               </div>
             ))}
           </div>
@@ -349,45 +410,45 @@ export default function Portfolio() {
       </section>
 
       {/* Learning Journey Section */}
-      <section id="learning" className="py-24 px-6">
-        <div className="mx-auto max-w-5xl">
+      <section id="learning" className="relative py-24 px-6">
+        <div className="mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-12">
-            <div className="p-2 rounded-lg bg-accent/10 border border-accent/20">
-              <BookOpen className="h-5 w-5 text-accent" />
+            <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
+              <BookOpen className="h-5 w-5 text-cyan-400" />
             </div>
             <h2 className="text-2xl font-semibold">Learning Journey</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <h3 className="font-semibold mb-4">Currently Exploring</h3>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+            <div className="p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300">
+              <h3 className="font-semibold text-lg mb-6 text-cyan-400">Currently Exploring</h3>
+              <ul className="space-y-4">
+                <li className="flex items-center gap-4 text-[#a0a0b0]">
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" />
                   Cloud Architecture & AWS Services
                 </li>
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                <li className="flex items-center gap-4 text-[#a0a0b0]">
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" />
                   Generative AI & Large Language Models
                 </li>
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                <li className="flex items-center gap-4 text-[#a0a0b0]">
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" />
                   System Design Patterns
                 </li>
               </ul>
             </div>
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <h3 className="font-semibold mb-4">Relevant Coursework</h3>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+            <div className="p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300">
+              <h3 className="font-semibold text-lg mb-6 text-cyan-400">Relevant Coursework</h3>
+              <ul className="space-y-4">
+                <li className="flex items-center gap-4 text-[#a0a0b0]">
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" />
                   Data Structures & Algorithms
                 </li>
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                <li className="flex items-center gap-4 text-[#a0a0b0]">
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" />
                   Database Management Systems
                 </li>
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                <li className="flex items-center gap-4 text-[#a0a0b0]">
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" />
                   Computer Networks
                 </li>
               </ul>
@@ -397,61 +458,69 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-6">
-        <div className="mx-auto max-w-5xl">
+      <section id="contact" className="relative py-24 px-6">
+        <div className="mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-12">
-            <div className="p-2 rounded-lg bg-accent/10 border border-accent/20">
-              <Mail className="h-5 w-5 text-accent" />
+            <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
+              <Mail className="h-5 w-5 text-cyan-400" />
             </div>
-            <h2 className="text-2xl font-semibold">Contact</h2>
+            <h2 className="text-2xl font-semibold">Get In Touch</h2>
           </div>
-          <div className="p-8 rounded-xl bg-card border border-border">
-            <p className="text-lg text-muted-foreground mb-8 max-w-lg">
+          <div className="p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a]">
+            <p className="text-xl text-[#a0a0b0] mb-8 max-w-lg">
               Interested in collaborating or have a question? Feel free to reach out.
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               <a 
                 href="mailto:shivamkgupta911@gmail.com" 
-                className="flex items-center gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+                className="flex items-center gap-4 p-5 rounded-xl bg-[#1a1a24] border border-[#2a2a3a] hover:border-cyan-500/30 hover:bg-[#1a1a24]/80 transition-all duration-300 group"
               >
-                <Mail className="h-5 w-5 text-accent" />
+                <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
+                  <Mail className="h-5 w-5 text-cyan-400" />
+                </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="font-medium">shivamkgupta911@gmail.com</p>
+                  <p className="text-sm text-[#6a6a7a]">Email</p>
+                  <p className="font-medium text-[#d0d0e0] group-hover:text-cyan-400 transition-colors">shivamkgupta911@gmail.com</p>
                 </div>
               </a>
               <a 
                 href="tel:+918787010548" 
-                className="flex items-center gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+                className="flex items-center gap-4 p-5 rounded-xl bg-[#1a1a24] border border-[#2a2a3a] hover:border-cyan-500/30 hover:bg-[#1a1a24]/80 transition-all duration-300 group"
               >
-                <Phone className="h-5 w-5 text-accent" />
+                <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
+                  <Phone className="h-5 w-5 text-cyan-400" />
+                </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Phone</p>
-                  <p className="font-medium">+91 87870 10548</p>
+                  <p className="text-sm text-[#6a6a7a]">Phone</p>
+                  <p className="font-medium text-[#d0d0e0] group-hover:text-cyan-400 transition-colors">+91 87870 10548</p>
                 </div>
               </a>
               <a 
                 href="https://github.com/shivamgupta911" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+                className="flex items-center gap-4 p-5 rounded-xl bg-[#1a1a24] border border-[#2a2a3a] hover:border-cyan-500/30 hover:bg-[#1a1a24]/80 transition-all duration-300 group"
               >
-                <Github className="h-5 w-5 text-accent" />
+                <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
+                  <Github className="h-5 w-5 text-cyan-400" />
+                </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">GitHub</p>
-                  <p className="font-medium">shivamgupta911</p>
+                  <p className="text-sm text-[#6a6a7a]">GitHub</p>
+                  <p className="font-medium text-[#d0d0e0] group-hover:text-cyan-400 transition-colors">shivamgupta911</p>
                 </div>
               </a>
               <a 
                 href="https://linkedin.com/in/shivam-gupta573b18324" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+                className="flex items-center gap-4 p-5 rounded-xl bg-[#1a1a24] border border-[#2a2a3a] hover:border-cyan-500/30 hover:bg-[#1a1a24]/80 transition-all duration-300 group"
               >
-                <Linkedin className="h-5 w-5 text-accent" />
+                <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
+                  <Linkedin className="h-5 w-5 text-cyan-400" />
+                </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">LinkedIn</p>
-                  <p className="font-medium">Shivam Gupta</p>
+                  <p className="text-sm text-[#6a6a7a]">LinkedIn</p>
+                  <p className="font-medium text-[#d0d0e0] group-hover:text-cyan-400 transition-colors">Shivam Gupta</p>
                 </div>
               </a>
             </div>
@@ -460,14 +529,16 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-border">
-        <div className="mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Shivam Kumar Gupta
-          </p>
-          <p className="text-sm text-muted-foreground">
-            Built with Next.js & Tailwind CSS
-          </p>
+      <footer className="py-8 px-6 border-t border-[#2a2a3a]">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-[#6a6a7a]">
+              &copy; 2025 Shivam Kumar Gupta. All rights reserved.
+            </p>
+            <p className="text-sm text-[#6a6a7a]">
+              Built with <span className="text-cyan-400">Next.js</span> & <span className="text-cyan-400">Tailwind CSS</span>
+            </p>
+          </div>
         </div>
       </footer>
     </main>
