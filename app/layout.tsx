@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Shivam Kumar Gupta | Software Engineer',
-  description: 'Software Engineer specializing in full-stack development with expertise in React, Next.js, and modern web technologies.',
+  title: 'Shivam Kumar Gupta |Aspiring Software Developer',
+  description: 'Aspiring Software Developer specializing in full-stack development with expertise in React, Next.js, and modern web technologies like AI,ML etc.',
   generator: 'v0.app',
   icons: {
     icon: [
