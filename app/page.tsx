@@ -120,15 +120,15 @@ export default function Portfolio() {
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Gupta
+                  Gupta 
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-[#8a8a9a] mb-4">
                 Aspiring Software Developer
               </p>
               <p className="text-base text-[#6a6a7a] leading-relaxed max-w-lg mb-8">
-                Building robust, scalable applications with modern web technologies. 
-                Currently pursuing B.Tech at MMMUT, Gorakhpur.
+                Building web applications, exploring AI, and sharpening problem-solving skills through DSA.
+                B.Tech ECE student at MMMUT Gorakhpur.
               </p>
               <div className="flex items-center gap-2 text-sm text-[#8a8a9a]">
                 <MapPin className="h-4 w-4 text-cyan-400" />
@@ -188,14 +188,14 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300">
               <p className="text-[#a0a0b0] leading-relaxed text-lg">
-                I&apos;m a software engineer passionate about creating elegant solutions to complex problems. 
+                I&apos;m a Aspiring software Developer passionate about creating elegant solutions to complex problems. 
                 My work spans across full-stack development, with expertise in modern JavaScript frameworks 
                 and a strong foundation in computer science fundamentals.
               </p>
             </div>
             <div className="p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300">
               <p className="text-[#a0a0b0] leading-relaxed text-lg">
-                Alongside my academic journey, I serve as an Executive Member of the Editorial Board, which helps me develop strong techno-managerial, organizational, and interpersonal skills.
+                Alongside my academic journey, I serve as an Executive Member of The Editorial Board, which helps me develop strong techno-managerial, organizational, and interpersonal skills.
               </p>
             </div>
           </div>
