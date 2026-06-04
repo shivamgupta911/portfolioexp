@@ -54,12 +54,13 @@ const experience = [
   },
 ]
 
-const projects = [
+const openSourceContributions = [
   {
-    title: "College Resource Management System",
-    type: "Full Stack Application",
-    description: "MERN-based college management system enabling students to access notes, track announcements, and upload resources.",
-    tech: ["MongoDB", "Express", "React", "Node.js"],
+    title: "GirlScript Summer of Code (GSSoC)",
+    role: "Open Source Contributor",
+    period: "October 2024",
+    description: "Contributed to open source projects as part of the GirlScript Summer of Code extended program. Collaborated with maintainers and other contributors to improve codebases, fix bugs, and add new features.",
+    tech: ["Open Source", "Git", "Collaboration", "Code Review"],
   },
 ]
 
@@ -265,35 +266,35 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Open Source Contributions Section */}
       <section id="projects" className="relative py-24 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-12">
             <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
-              <ExternalLink className="h-5 w-5 text-cyan-400" />
+              <Github className="h-5 w-5 text-cyan-400" />
             </div>
-            <h2 className="text-2xl font-semibold">Projects</h2>
+            <h2 className="text-2xl font-semibold">Open Source Contributions</h2>
           </div>
           <div className="space-y-6">
-            {projects.map((project, index) => (
+            {openSourceContributions.map((contribution, index) => (
               <div 
                 key={index} 
                 className="group p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,212,255,0.1)]"
               >
-                <div className="flex items-start justify-between mb-4">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                   <div>
                     <h3 className="font-semibold text-xl mb-2 group-hover:text-cyan-400 transition-colors">
-                      {project.title}
+                      {contribution.title}
                     </h3>
-                    <span className="text-sm text-cyan-400/80 font-medium">{project.type}</span>
+                    <span className="text-sm text-cyan-400/80 font-medium">{contribution.role}</span>
                   </div>
-                  <div className="p-2 rounded-lg bg-[#1a1a24] group-hover:bg-cyan-500/10 transition-colors">
-                    <ExternalLink className="h-5 w-5 text-[#6a6a7a] group-hover:text-cyan-400 transition-colors" />
-                  </div>
+                  <span className="px-4 py-1.5 rounded-full bg-[#1a1a24] border border-[#2a2a3a] text-sm text-[#8a8a9a] whitespace-nowrap">
+                    {contribution.period}
+                  </span>
                 </div>
-                <p className="text-[#a0a0b0] leading-relaxed mb-6">{project.description}</p>
+                <p className="text-[#a0a0b0] leading-relaxed mb-6">{contribution.description}</p>
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
+                  {contribution.tech.map((tech) => (
                     <span 
                       key={tech} 
                       className="px-3 py-1.5 text-sm bg-[#1a1a24] border border-[#2a2a3a] rounded-lg text-[#a0a0b0] hover:border-cyan-500/30 hover:text-cyan-400 transition-all"
