@@ -26,7 +26,7 @@ const certifications = [
   {
     title: "AWS - Solutions Architecture Simulation",
     issuer: "Amazon Web Services",
-    icon: "/icons/aws.svg",
+    logo: "/aws.svg",
     date: "Jul 2025",
     skills: ["Cloud Architecture Design", "AWS Services"],
     color: "from-orange-500 to-yellow-500",
