@@ -34,7 +34,7 @@ const certifications = [
   {
     title: "Deloitte - Cyber Job Simulation",
     issuer: "Forage",
-    logo: "/deloitte.svg",
+    logo: "/deloitte.png",
     date: "Jul 2025",
     skills: ["Cybersecurity", "Threat & Vulnerability Management"],
     color: "from-green-500 to-emerald-500",
