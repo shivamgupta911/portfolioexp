@@ -34,7 +34,7 @@ const certifications = [
   {
     title: "Deloitte - Cyber Job Simulation",
     issuer: "Forage",
-    
+    icon: "/icons/forage.png",
     date: "Jul 2025",
     skills: ["Cybersecurity", "Threat & Vulnerability Management"],
     color: "from-green-500 to-emerald-500",
@@ -42,7 +42,7 @@ const certifications = [
   {
     title: "Mastering Generative AI and ChatGPT",
     issuer: "GeeksforGeeks",
-    
+    icon: "/icons/gfg.png",
     date: "Aug 2025",
     skills: ["Prompt Engineering", "Artificial Intelligence", "Machine Learning"],
     color: "from-purple-500 to-pink-500",
