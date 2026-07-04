@@ -81,6 +81,7 @@ const experience = [
   {
     role: "Treasurer",
     organization: "The Editorial Board",
+    logo: "/EDB.png",
     period: "May 2025 - Present",
     description: "Contributing to editorial initiatives and content management for university publications.",
   },
