@@ -619,7 +619,7 @@ export default function Portfolio() {
                 className="flex items-center gap-4 p-5 rounded-xl bg-[#1a1a24] border border-[#2a2a3a] hover:border-cyan-500/30 hover:bg-[#1a1a24]/80 transition-all duration-300 group"
               >
                 <div className="premium-card p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
-                  <Mail className="h-5 w-5 text-cyan-400" />
+                  <Mail className="social-icon h-5 w-5 text-cyan-400" />
                 </div>
                 <div>
                   <p className="text-sm text-[#6a6a7a]">Email</p>
@@ -633,7 +633,7 @@ export default function Portfolio() {
                className="flex items-center gap-4 p-5 rounded-xl bg-[#1a1a24] border border-[#2a2a3a] hover:border-green-500/30 transition-all"
                 >
   <div className="premium-card p-3 rounded-xl bg-green-500/10">
-    <MessageCircle className="h-5 w-5 text-green-500" />
+    <MessageCircle className="social-icon h-5 w-5 text-green-500" />
   </div>
 
   <div>
@@ -650,7 +650,7 @@ export default function Portfolio() {
                 className="flex items-center gap-4 p-5 rounded-xl bg-[#1a1a24] border border-[#2a2a3a] hover:border-cyan-500/30 hover:bg-[#1a1a24]/80 transition-all duration-300 group"
               >
                 <div className="premium-card p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
-                  <Github className="h-5 w-5 text-cyan-400" />
+                  <Github className="social-icon h-5 w-5 text-cyan-400" />
                 </div>
                 <div>
                   <p className="text-sm text-[#6a6a7a]">GitHub</p>
@@ -664,7 +664,7 @@ export default function Portfolio() {
                 className="flex items-center gap-4 p-5 rounded-xl bg-[#1a1a24] border border-[#2a2a3a] hover:border-cyan-500/30 hover:bg-[#1a1a24]/80 transition-all duration-300 group"
               >
                 <div className="premium-card p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
-                  <Linkedin className="h-5 w-5 text-cyan-400" />
+                  <Linkedin className="social-icon h-5 w-5 text-cyan-400" />
                 </div>
                 <div>
                   <p className="text-sm text-[#6a6a7a]">LinkedIn</p>
