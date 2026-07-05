@@ -556,13 +556,13 @@ export default function Portfolio() {
       <section id="learning" className="relative py-24 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-12">
-            <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
+            <div className="premium-card p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
               <BookOpen className="h-5 w-5 text-cyan-400" />
             </div>
             <h2 className="text-2xl font-semibold">Learning Journey</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300">
+            <div className="premium-card p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300">
               <h3 className="font-semibold text-lg mb-6 text-cyan-400">Currently Exploring</h3>
               <ul className="space-y-4">
                 <li className="flex items-center gap-4 text-[#a0a0b0]">
@@ -579,7 +579,7 @@ export default function Portfolio() {
                 </li>
               </ul>
             </div>
-            <div className="p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300">
+            <div className="premium-card p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a] hover:border-cyan-500/30 transition-all duration-300">
               <h3 className="font-semibold text-lg mb-6 text-cyan-400">Professional Development</h3>
               <ul className="space-y-4">
                 <li className="flex items-center gap-4 text-[#a0a0b0]">
@@ -604,12 +604,12 @@ export default function Portfolio() {
       <section id="contact" className="relative py-24 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-12">
-            <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
+            <div className="premium-card p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
               <Mail className="h-5 w-5 text-cyan-400" />
             </div>
             <h2 className="text-2xl font-semibold">Get In Touch</h2>
           </div>
-          <div className="p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a]">
+          <div className="premium-card p-8 rounded-2xl bg-[#12121a] border border-[#2a2a3a]">
             <p className="text-xl text-[#a0a0b0] mb-8 max-w-lg">
               Interested in collaborating or have a question? Feel free to reach out.
             </p>
@@ -618,7 +618,7 @@ export default function Portfolio() {
                 href="mailto:shivamkgupta911@gmail.com" 
                 className="flex items-center gap-4 p-5 rounded-xl bg-[#1a1a24] border border-[#2a2a3a] hover:border-cyan-500/30 hover:bg-[#1a1a24]/80 transition-all duration-300 group"
               >
-                <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
+                <div className="premium-card p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
                   <Mail className="h-5 w-5 text-cyan-400" />
                 </div>
                 <div>
@@ -632,7 +632,7 @@ export default function Portfolio() {
                 rel="noopener noreferrer"
                className="flex items-center gap-4 p-5 rounded-xl bg-[#1a1a24] border border-[#2a2a3a] hover:border-green-500/30 transition-all"
                 >
-  <div className="p-3 rounded-xl bg-green-500/10">
+  <div className="premium-card p-3 rounded-xl bg-green-500/10">
     <MessageCircle className="h-5 w-5 text-green-500" />
   </div>
 
@@ -649,7 +649,7 @@ export default function Portfolio() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-5 rounded-xl bg-[#1a1a24] border border-[#2a2a3a] hover:border-cyan-500/30 hover:bg-[#1a1a24]/80 transition-all duration-300 group"
               >
-                <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
+                <div className="premium-card p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
                   <Github className="h-5 w-5 text-cyan-400" />
                 </div>
                 <div>
@@ -663,7 +663,7 @@ export default function Portfolio() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-5 rounded-xl bg-[#1a1a24] border border-[#2a2a3a] hover:border-cyan-500/30 hover:bg-[#1a1a24]/80 transition-all duration-300 group"
               >
-                <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
+                <div className="premium-card p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
                   <Linkedin className="h-5 w-5 text-cyan-400" />
                 </div>
                 <div>
