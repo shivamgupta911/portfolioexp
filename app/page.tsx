@@ -27,9 +27,12 @@ const certifications = [
     title: "AWS - Solutions Architecture Simulation",
     issuer: "Amazon Web Services",
     logo: "/aws.svg",
+    
     date: "Jul 2025",
     skills: ["Cloud Architecture Design", "AWS Services"],
+    
     color: "from-orange-500 to-yellow-500",
+        certificate: "/aws1.jpg",
   },
   {
     title: "Deloitte - Cyber Job Simulation",
@@ -38,6 +41,7 @@ const certifications = [
     date: "Jul 2025",
     skills: ["Cybersecurity", "Threat & Vulnerability Management"],
     color: "from-green-500 to-emerald-500",
+        certificate: "/forage.jpg",
   },
   {
     title: "Mastering Generative AI and ChatGPT",
@@ -46,6 +50,7 @@ const certifications = [
     date: "Aug 2025",
     skills: ["Prompt Engineering", "Artificial Intelligence", "Machine Learning"],
     color: "from-purple-500 to-pink-500",
+    certificate: "/gfgg.jpg",
   },
 ]
 
