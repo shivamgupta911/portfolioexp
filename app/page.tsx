@@ -199,7 +199,14 @@ export default function Portfolio() {
                     className="flex items-center gap-3 p-3 rounded-xl bg-[#1a1a24] hover:bg-[#2a2a3a] border border-transparent hover:border-cyan-500/30 transition-all duration-300 group"
                   >
                     <Github className="h-5 w-5 text-[#8a8a9a] group-hover:text-cyan-400 transition-colors" />
-                    <span className="text-sm text-[#8a8a9a] group-hover:text-white transition-colors">GitHub</span>
+                   <div>
+  <p className="text-sm font-medium text-[#d0d0e0] group-hover:text-white transition-colors">
+    GitHub
+  </p>
+  <p className="text-xs text-[#6a6a7a]">
+    Open Source & Projects
+  </p>
+</div>
                     <ChevronRight className="h-4 w-4 text-[#4a4a5a] group-hover:text-cyan-400 ml-auto transition-colors" />
                   </a>
                   <a 
@@ -209,7 +216,14 @@ export default function Portfolio() {
                     className="flex items-center gap-3 p-3 rounded-xl bg-[#1a1a24] hover:bg-[#2a2a3a] border border-transparent hover:border-cyan-500/30 transition-all duration-300 group"
                   >
                     <Linkedin className="h-5 w-5 text-[#8a8a9a] group-hover:text-cyan-400 transition-colors" />
-                    <span className="text-sm text-[#8a8a9a] group-hover:text-white transition-colors">LinkedIn</span>
+                <div>
+  <p className="text-sm font-medium text-[#d0d0e0] group-hover:text-white transition-colors">
+    LinkedIn
+  </p>
+  <p className="text-xs text-[#6a6a7a]">
+    Professional Network
+  </p>
+</div>
                     <ChevronRight className="h-4 w-4 text-[#4a4a5a] group-hover:text-cyan-400 ml-auto transition-colors" />
                   </a>
                   <a 
