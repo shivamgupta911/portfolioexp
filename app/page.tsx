@@ -159,14 +159,33 @@ export default function Portfolio() {
                 Aspiring Software Developer
               </p>
               <p className="text-base text-[#6a6a7a] leading-relaxed max-w-lg mb-8">
-                Building web applications, exploring AI, and sharpening problem-solving skills through DSA.
-                B.Tech ECE student at MMMUT Gorakhpur.
+                Building responsive web applications with React and Next.js while strengthening problem-solving through DSA. Passionate about AI, cloud technologies, and creating impactful digital experiences.
               </p>
               <div className="flex items-center gap-2 text-sm text-[#8a8a9a]">
                 <MapPin className="h-4 w-4 text-cyan-400" />
                 Gorakhpur, India
               </div>
             </div>
+
+
+            <div className="flex flex-wrap gap-4 mt-8">
+
+  <a
+    href="/resume.pdf"
+    target="_blank"
+    className="px-6 py-3 rounded-xl bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition-all duration-300 hover:scale-105"
+  >
+    Download Resume
+  </a>
+
+  <a
+    href="#projects"
+    className="px-6 py-3 rounded-xl border border-[#2a2a3a] hover:border-cyan-500 text-white transition-all duration-300 hover:bg-cyan-500/10"
+  >
+    View Projects
+  </a>
+
+</div>
             
             {/* Social Links Card */}
             <div className="lg:self-center">
