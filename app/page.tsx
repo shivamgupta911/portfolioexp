@@ -59,7 +59,7 @@ const experience = [
       "Developing responsive web applications using React.js, modern frontend technologies, and industry-standard development practices while collaborating in a remote team.",
     skills: ["React.js", "Next.js", "Web Development","Web Infrastructure"],
     logo: "/zidio.png",
-    certificate: "/certificates/zidio-offer-letter.pdf",
+    certificate: "/ol.png",
     button: "View Offer Letter",
   },
   {
