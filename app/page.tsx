@@ -80,7 +80,7 @@ const experience = [
   },
   {
     role: "Treasurer",
-    organization: "The Editorial Board",
+    organization: "The Editorial Board, MMMUT GORAKHPUR",
     logo: "/EDB.png",
     period: "May 2025 - Present",
     description: "Serving as Treasurer of MMMUT's official publishing body with a Legacy of over five decades after progressing from Executive Member, leading financial operations and organizational initiatives..",
@@ -117,7 +117,7 @@ export default function Portfolio() {
         <div className="mx-auto max-w-6xl px-6 py-4">
           <div className="flex items-center justify-between">
             <span className="text-lg font-bold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              SKG
+              Namaste🙏
             </span>
             <div className="hidden md:flex items-center gap-8">
               {["About", "Education", "Experience", "Projects", "Contact"].map((item) => (
