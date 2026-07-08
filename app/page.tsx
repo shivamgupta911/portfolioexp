@@ -342,9 +342,14 @@ export default function Portfolio() {
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
 
                 <div>
-                  <h3 className="text-2xl font-semibold group-hover:text-cyan-400 transition-colors">
-                    {exp.role}
-                  </h3>
+                 <a
+  href={exp.website}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-cyan-400 font-medium text-lg hover:text-cyan-300 transition-colors"
+>
+  {exp.organization}
+</a>
 
                   <p className="text-cyan-400 font-medium text-lg">
                     {exp.organization}
