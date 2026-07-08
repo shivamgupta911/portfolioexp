@@ -92,7 +92,7 @@ const experience = [
       website: "https://www.theeditorialboard.in/",
     logo: "/EDB.png",
     period: "May 2025 - Present",
-    description: "Serving as Treasurer of MMMUT's official publishing body with a Legacy of over five decades after progressing from Executive Member, leading financial operations and organizational initiatives..",
+    description: "Serving as Treasurer of MMMUT's official publishing body with a Legacy spanning over five decades after progressing from Executive Member, leading financial operations and organizational initiatives..",
   },
 ]
 
